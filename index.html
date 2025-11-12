@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
@@ -39,8 +43,51 @@
         </div>
       </div>
     </header>
-    <section class="hero"></section>
-    <section class="link"></section>
+    <section class="hero">
+      <div class="container hero-columns">
+        <div class="left-col">
+          <h1>DOWNLOAD APP, SAVE MONEY, MAKE FRIENDS!</h1>
+          <p class="description">
+            Its simple and its free. Play your part in reducing Carbon Footprint
+            and help Mother Nature to sustain its beauty. So what are you
+            waiting for ? Lets ride together
+          </p>
+          <div class="hero-actions">
+            <a class="large-button btn-submit" href="#"
+              ><i class="fab fa-app-store-ios" aria-hidden="true"></i>
+              DOWNLOAD</a
+            >
+            <a class="small-button btn-submit" href="#"
+              ><i class="fab fa-google-play" aria-hidden="true"></i> DOWNLOAD</a
+            >
+          </div>
+        </div>
+        <div class="right-col">
+          <img
+            src="img/image hero.png"
+            alt="Hero illustration"
+            class="hero-img"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="link">
+      <div class="container link-container">
+        <p class="description">Let's go. Get a link to download the app</p>
+        <form class="link-form" action="#" method="post">
+          <input
+            class="link-input"
+            type="email"
+            name="email"
+            placeholder="Enter your mobile phone"
+            required
+          />
+          <button class="small-button btn-submit" type="submit">
+            Apply to drive
+          </button>
+        </form>
+      </div>
+    </section>
     <section class="how-it-works">
       <div class="container">
         <h2>How <span class="green">Tere</span> Works</h2>
@@ -92,7 +139,6 @@
         </div>
       </div>
     </section>
-    <section class="benefits"></section>
     <footer></footer>
   </body>
 </html>

@@ -73,6 +73,8 @@ h3 {
   text-decoration: none;
   text-transform: none;
 }
+
+/* (Unified .btn-submit styles are defined later to ensure consistent appearance) */
 .small {
   font-size: 16px;
   font-family: Inter;
@@ -125,6 +127,196 @@ header {
   background-color: black;
 }
 
+/* LINK SECTION */
+.link .container {
+  background: var(--green);
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--white);
+  margin-top: 40px;
+}
+
+/* HERO section */
+.hero {
+  margin-top: 60px;
+}
+
+/* HERO: make the inner container display columns side-by-side */
+.hero-columns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.hero-columns .left-col {
+  flex: 1 1 50%;
+}
+.hero-columns .right-col {
+  flex: 1 1 50%;
+}
+
+@media (max-width: 900px) {
+  .hero-columns {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+/* Make the hero paragraph narrower (70% of the left column) */
+.hero-columns .left-col .description {
+  max-width: 70%;
+}
+
+/* space between hero paragraph and its action buttons */
+.hero-columns .left-col .hero-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.link .description {
+  color: var(--white);
+  font-size: 20px;
+  max-width: 60%;
+}
+.link-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.link-input {
+  padding: 18px 200px 18px 0;
+  border-radius: 5px;
+  border: none;
+  min-width: 400px;
+  font-size: 18px;
+  text-align: left;
+  padding-right: 20px;
+}
+.link-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px; /* spacing between icon and text */
+  background: var(--black);
+  color: var(--white);
+  padding: 18px 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 120ms ease,
+    opacity 120ms ease;
+}
+.btn-submit:hover {
+  background: #111;
+  transform: translateY(-1px);
+  opacity: 1;
+}
+.btn-submit i {
+  font-size: 35px;
+  line-height: 1;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+/* Generic link-as-button styles for anchor buttons */
+a.large-button,
+a.small-button {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: Inter;
+  transition: background-color 150ms ease, transform 120ms ease,
+    opacity 120ms ease;
+}
+
+/* Primary large button */
+a.large-button {
+  background: var(--green);
+  color: var(--white);
+}
+a.large-button:hover {
+  background: #63a86f; /* slightly darker */
+  transform: translateY(-1px);
+}
+
+/* Secondary small button (outline) */
+a.small-button {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+a.small-button:hover {
+  background: rgba(117, 191, 122, 0.08);
+}
+
+/* Anchor buttons that should match the black submit button */
+a.btn-submit {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 700;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+a.btn-submit:hover {
+  background: #111;
+  transform: translateY(-1px);
+}
+
+/* Responsive: stack content on smaller screens */
+@media (max-width: 900px) {
+  .link .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  .link .description {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+  .link-form {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .link-input {
+    min-width: 200px;
+    width: 100%;
+  }
+  .link .btn-submit {
+    width: 100%;
+  }
+}
+
 /* HOW IT WORKS */
 
 .how-it-works {
@@ -170,4 +362,13 @@ header {
 }
 .text-right .number {
   margin-left: auto;
+}
+
+.section .benefits {
+  display: flex;
+  width: 1276px;
+  height: 304px;
+  padding: 0 215px 1.18px 1px;
+  align-items: center;
+  flex-shrink: 0;
 }
