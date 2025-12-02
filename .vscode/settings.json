@@ -1,3 +1,8 @@
 {
-  "liveServer.settings.port": 5501
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Winter is Coming (Dark Black - No Italics)",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "json.schemas": [],
+  "liveServer.settings.donotShowInfoMsg": true
 }
