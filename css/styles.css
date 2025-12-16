@@ -457,3 +457,44 @@ a.btn-submit:hover {
   font-size: 14px;
   color: #7ebf7d;
 }
+
+/* BENEFITS layout */
+.benefits .benefits-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+.benefits .benefit {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+}
+.benefits .benefit .benefit-img img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+.benefits .benefit .benefit-content h3 {
+  margin: 0 0 8px 0;
+}
+.benefits .benefit.img-right {
+  flex-direction: row-reverse;
+}
+.benefits .benefit.img-left {
+  flex-direction: row;
+}
+
+@media (max-width: 900px) {
+  .benefits .benefits-row {
+    grid-template-columns: 1fr;
+  }
+  .benefits .benefit {
+    flex-direction: column;
+    text-align: center;
+  }
+  .benefits .benefit.img-right {
+    flex-direction: column;
+  }
+}
